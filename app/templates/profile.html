@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% extends "base.html" %}
+
+{% block main %}
+<title id="myprofile"> Profile </title>
+<head>
+	<link rel="stylesheet" type="text/css"
+	 href="{{url_for('static', filename='css/profile.css')}}">
+</head>
+
+<body>
+	<div class = "profilecontainer">
+		<h1 id= "Profile"> Profile </h1>
+		<img src=" {{url_for('static', filename='JohnsonGrad.jpg')}} ">
+			<div class= "Info">
+				<div class= "my_name">
+					<h1 id= "name"><b> Georgia Pickersgill</b></h1>
+				</div>
+
+				<div class= "date">
+						<p >Today's date is {{date}} </p> 
+				</div>
+
+				<div id= "info">
+					<br>
+					<p><b>Username:</b> GeorgiaTheGreat</p>
+					<p><b>ID Number:</b> 620042163</p>
+					<p><b>Age: </b>indeterminate</p>
+					<p><b>Gender:</b> Female</p>
+					<hr>
+					<p>I am a legendary and all powerful Jedi Master</p>
+				</div>
+		</div>
+	</div>
+{% endblock %}
+</body>
+</html>>

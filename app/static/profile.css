@@ -1,0 +1,22 @@
+#Profile{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.Info{
+	border-style: outset;
+	float: right;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#name{
+	font-size: 35px;
+	background-color: grey;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+/*.my_name{
+	opacity: 0.5;
+}

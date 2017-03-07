@@ -7,12 +7,18 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for
+import time
 
 
 ###
 # Routing for your application.
 ###
 
+@app.route('/profile')
+def profile ():
+	""" Renders the website's profile page."""
+	return render_template('profile.html', date = timeinfo())
+	
 @app.route('/')
 def home():
     """Render website's home page."""
@@ -22,7 +28,7 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Georgia Pickersgill")
 
 
 ###
@@ -51,6 +57,12 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+def timeinfo():
+	date = time.strftime("%a, %d %b %Y")
+
+	return date
+	#return date
 
 
 if __name__ == '__main__':
